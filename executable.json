@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-10-11T12:12:50-04:00",
+    "name": "exe (elf) runtime",
+    "author": "intexc@proton.me",
+    "description": "A runtime for executables.",
+    "image": "quay.io\/parkervcp\/pterodactyl-images:base_debian",
+    "startup": ".\/${EXECUTABLE}",
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {},
+    "variables": [
+        {
+            "name": "Executable File",
+            "description": "This is the name of the executable file",
+            "env_variable": "EXECUTABLE",
+            "default_value": "",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string"
+        }
+    ]
+}

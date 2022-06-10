@@ -1,12 +1,18 @@
 {
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
-        "version": "PTDL_v1"
+        "version": "PTDL_v2",
+        "update_url": null
     },
-    "exported_at": "2020-10-11T12:12:50-04:00",
-    "name": "exe (elf) runtime",
-    "author": "intexc@proton.me",
+    "exported_at": "2022-06-11T00:10:07+03:00",
+    "name": "Executable (elf)",
+    "author": "admin@illegalstuff.xyz",
     "description": "A runtime for executables.",
-    "image": "quay.io\/parkervcp\/pterodactyl-images:base_debian",
+    "features": null,
+    "docker_images": {
+        "quay.io\/parkervcp\/pterodactyl-images:base_debian": "quay.io\/parkervcp\/pterodactyl-images:base_debian"
+    },
+    "file_denylist": [],
     "startup": ".\/${EXECUTABLE}",
     "config": {
         "files": "{}",
@@ -14,16 +20,23 @@
         "logs": "{}",
         "stop": "^C"
     },
-    "scripts": {},
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
     "variables": [
         {
             "name": "Executable File",
-            "description": "This is the name of the executable file",
+            "description": "",
             "env_variable": "EXECUTABLE",
-            "default_value": "",
-            "user_viewable": 1,
-            "user_editable": 1,
-            "rules": "required|string"
+            "default_value": "main",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
         }
     ]
 }
